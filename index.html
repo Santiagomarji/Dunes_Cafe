@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dunes Café • Ghaith Marji</title>
+  <meta name="description" content="Dunes Café by Ghaith Marji — Specialty Arabic coffee, chai, sweets + AI/software portfolio." />
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #121821;
+      --muted: #8aa1b2;
+      --text: #eaf2f8;
+      --accent: #7fd1ae;
+      --accent2: #9bd0ff;
+      --border: #223042;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    a { color: var(--accent2); text-decoration: none; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px 48px; }
+    .card {
+      background: linear-gradient(180deg, #0f1520, #0a1017);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      margin: 14px 0;
+    }
+    .title { font-size: 28px; font-weight: 800; letter-spacing: .2px; }
+    .subtitle { color: var(--muted); margin-top: 6px; }
+    .pillbar { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+    .pill {
+      background: #0f1722;
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .btns { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; margin-top: 10px; }
+    .btn {
+      display: inline-block;
+      text-align: center;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .btn.primary {
+      background: linear-gradient(135deg, #1b2b40, #1a3b2f);
+      border-color: #224a3d;
+      color: #dbffe7;
+    }
+    .btn.secondary {
+      background: #0f1722;
+    }
+    .section-title { font-weight: 700; font-size: 18px; margin-bottom: 6px; }
+    ul { margin: 8px 0 0 18px; }
+    .muted { color: var(--muted); }
+    .note {
+      background: #111826;
+      border: 1px dashed #2a3a52;
+      padding: 10px;
+      border-radius: 10px;
+      color: #a1b4c5;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 24px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- Header -->
+    <div class="card">
+      <div class="title">Ghaith Marji</div>
+      <div class="subtitle">Founder of Dunes Café • Coffee Creator • AI & Software</div>
+      <div class="pillbar">
+        <div class="pill">📍 Manhattan, NYC</div>
+        <div class="pill">📞 <a href="tel:+19093315093">+1 909 331 5093</a></div>
+        <div class="pill">✉️ <a href="mailto:marjighaith26@gmail.com">marjighaith26@gmail.com</a></div>
+        <div class="pill">📸 <a href="https://instagram.com/dunes_cafe">@dunes_cafe</a></div>
+      </div>
+      <div class="btns">
+        <a class="btn primary" href="#coffee">☕ Dunes Café Profile</a>
+        <a class="btn secondary" href="#ai">🤖 AI & Software Portfolio</a>
+      </div>
+    </div>
+
+    <!-- Coffee Section -->
+    <div id="coffee" class="card">
+      <div class="section-title">Dunes Café • Coffee & Chai</div>
+      <p class="muted">Specialty Arabic-style drinks & homemade sweets. Open to part-time shifts and pop-up partnerships.</p>
+      <ul>
+        <li>Arabic Chai Latte</li>
+        <li>Cardamom-Infused Coffee</li>
+        <li>Sweet Milk Coffee (Gahwa)</li>
+        <li>Homemade Arabic Sweets</li>
+      </ul>
+      <div class="btns">
+        <a class="btn primary" href="tel:+19093315093">Call Now</a>
+        <a class="btn secondary" href="mailto:marjighaith26@gmail.com?subject=Dunes%20Cafe%20Barista%20Application">Email</a>
+      </div>
+    </div>
+
+    <!-- AI / Software Portfolio Section -->
+    <div id="ai" class="card">
+      <div class="section-title">AI & Software Highlights</div>
+      <p class="muted">
+        AI chatbots • Video automation • Social media pipelines • n8n workflows • WhatsApp bot integrations
+      </p>
+      <div class="note">
+        • WhatsApp Cloud API bot + GPT integration<br>
+        • n8n automations (video generation pipelines, Replicate/Veo)<br>
+        • Social content automation (captioning, scheduling, analytics)<br>
+        • Client chatbots for FAQs, booking, and sales
+      </div>
+      <div class="btns">
+        <a class="btn primary" href="https://instagram.com/dunes_cafe" target="_blank">View Instagram</a>
+        <a class="btn secondary" href="mailto:marjighaith26@gmail.com">Contact Me</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">© 2025 Ghaith Marji • Dunes Café</div>
+  </div>
+</body>
+</html>

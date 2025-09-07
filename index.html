@@ -3,147 +3,209 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dunes Café • Arabic Coffee & Chai in NYC</title>
-  <meta name="description" content="Dunes Café by Ghaith Marji — Arabic coffee & chai, farmers market pop-ups, weddings, and private events in NYC." />
+  <title>Dunes Café • Arabic Coffee & Chai NYC</title>
+  <meta name="description" content="Dunes Café — specialty Arabic coffee, spiced chai, Arabic sweets, farmers market pop-ups, weddings & events in NYC." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg: #F7F3EE;         /* cream */
-      --ink: #2B2B2B;        /* dark text */
-      --accent: #8E5A2B;     /* espresso */
-      --accent-2: #C9A66B;   /* cardamom/golden */
-      --accent-3: #E5D8C8;   /* milk foam */
-      --line: #E5DDD2;
-      --pill: #FFF9F0;
+    :root {
+      --bg:#FAF8F5;
+      --card:#FFFFFF;
+      --espresso:#3A2A1B;
+      --foam:#FFF9F3;
+      --accent:#8E5A2B;
+      --accent2:#C9A66B;
+      --line:#E8E1D9;
+      --muted:#6B5642;
     }
-    *{box-sizing:border-box}
+    *{box-sizing:border-box;margin:0;padding:0}
     html,body{
-      margin:0; padding:0; background:var(--bg); color:var(--ink);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      background:var(--bg);
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--espresso);
+      -webkit-font-smoothing:antialiased;
     }
-    a{color:var(--accent); text-decoration:none}
-    .wrap{max-width:960px; margin:0 auto; padding:24px 18px 56px}
-    .card{
-      background: #FFFFFF; border:1px solid var(--line); border-radius:18px; padding:18px; margin:14px 0;
-      box-shadow: 0 8px 24px rgba(160,120,80,0.08);
-    }
-    /* Hero */
+    a{color:var(--accent);text-decoration:none}
+    .wrap{max-width:1050px;margin:0 auto;padding:28px 18px 64px}
+    /* NAV */
+    .nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+    .brand{font-weight:800;font-size:20px;letter-spacing:.3px}
+    .nav a{font-weight:600;margin-left:18px;opacity:.85}
+    /* HERO */
     .hero{
-      position:relative; overflow:hidden; background:linear-gradient(180deg,#FFF,#FBF6EE);
+      border:1px solid var(--line);
+      border-radius:26px;
+      background:linear-gradient(180deg,#fff,#FBF6EE);
+      padding:40px 28px;
+      display:grid;gap:20px;
     }
-    .hero::after{
-      content:""; position:absolute; inset:-30% -30% auto auto; width:520px; height:520px;
-      background: radial-gradient(closest-side, #F1E6D6, transparent);
-      filter: blur(10px); opacity:.6; border-radius:50%;
+    @media(min-width:900px){.hero{grid-template-columns:1.2fr .8fr;align-items:center}}
+    .h-title{font-size:42px;line-height:1.05;margin:0;color:var(--espresso)}
+    .h-sub{color:var(--muted);margin:12px 0 0 0;font-size:16px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .btn{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px 16px;
+      font-weight:600;
+      transition:.2s ease;
     }
-    h1{font-size:34px; line-height:1.1; margin:6px 0; letter-spacing:.2px}
-    .sub{color:#6B5642; margin-top:6px}
-    .pillbar{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
-    .pill{background:var(--pill); border:1px solid var(--line); padding:8px 12px; border-radius:999px; color:#6B5642; font-size:14px}
-    .btns{display:grid; gap:10px; grid-template-columns:1fr 1fr; margin-top:12px}
-    .btn{display:inline-block; text-align:center; padding:12px 14px; border-radius:12px; border:1px solid var(--line)}
-    .primary{background: var(--accent); color:#fff; border-color:#7A4E27}
-    .secondary{background:#FFF5E8; color:#523A1E}
-    .section-title{font-weight:800; font-size:20px; margin:0 0 6px; color:#3B2A1A}
-    .muted{color:#7D6B57}
+    .btn.primary{background:var(--espresso);color:#fff;border-color:#2f2217}
+    .btn.light{background:#FFF5E8;color:#523A1E}
+    /* SECTIONS */
+    .panel{
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:var(--card);
+      padding:28px 24px;
+      margin-top:28px;
+      box-shadow:0 10px 28px rgba(160,120,80,.08)
+    }
+    .section-title{font-weight:800;font-size:22px;margin:0 0 10px}
+    .muted{color:var(--muted)}
     ul{margin:10px 0 0 18px}
-    .grid{display:grid; gap:16px}
-    @media (min-width:820px){.grid.two{grid-template-columns:1fr 1fr}}
-    .note{background:#FFF8EF; border:1px dashed #E9D7BD; padding:12px; border-radius:12px; color:#6B5642}
-    .listline{display:flex; justify-content:space-between; gap:8px; border-bottom:1px dashed #E9D7BD; padding:8px 0}
-    .tag{display:inline-flex; align-items:center; gap:6px; background:#FFF4E1; border:1px solid #E9D7BD; border-radius:999px; padding:6px 10px; font-size:12px; color:#7D6B57}
-    /* Gallery */
-    .gallery{display:grid; gap:10px; grid-template-columns:1fr 1fr; }
-    @media (min-width:720px){.gallery{grid-template-columns:1fr 1fr 1fr}}
-    .tile{aspect-ratio:1/1; border-radius:12px; overflow:hidden; background:#F0E7DB; border:1px solid var(--line);
-          display:flex; align-items:center; justify-content:center; color:#9A7B54; font-weight:600}
-    /* Testimonials */
-    .quote{background:#FFF; border-left:4px solid var(--accent-2); padding:14px; border-radius:8px; border:1px solid var(--line)}
-    .footer{text-align:center; color:#7D6B57; margin-top:28px; font-size:12px}
+    .grid{display:grid;gap:18px}
+    @media(min-width:860px){.grid.two{grid-template-columns:1fr 1fr}}
+    .note{
+      background:#FFF8EF;
+      border:1px dashed #E9D7BD;
+      padding:14px;
+      border-radius:14px;
+      color:#6B5642;
+      font-size:14px;
+    }
+    /* EVENTS */
+    .listline{
+      display:flex;
+      justify-content:space-between;
+      gap:8px;
+      border-bottom:1px dashed var(--line);
+      padding:10px 0;
+      font-size:15px;
+    }
+    .tag{
+      border:1px solid var(--line);
+      padding:6px 12px;
+      border-radius:999px;
+      font-size:12px;
+      background:#FFF9F0;
+      color:#7D6B57;
+    }
+    /* FOOTER */
+    .footer{
+      margin-top:40px;
+      text-align:center;
+      color:#7D6B57;
+      font-size:13px;
+    }
+    .chipbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .chip{
+      background:#FFF9F0;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:13px;
+      color:#6B5642;
+    }
+    .imgph{
+      aspect-ratio:1.2/1;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:#F0E8DE;
+      display:grid;
+      place-items:center;
+      color:#a1886a;
+      font-weight:600;
+      font-size:15px;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <!-- HERO -->
-    <div class="card hero">
-      <div class="pill" style="width:max-content; background:#FFF2DC; border-color:#EED9B9">Dunes Café</div>
-      <h1>Arabic Coffee & Chai by Ghaith Marji</h1>
-      <div class="sub">Cardamom coffee • Spiced chai • Arabic sweets • Farmers markets • Weddings & private events</div>
-      <div class="pillbar">
-        <div class="pill">📍 Manhattan, NYC</div>
-        <div class="pill">📞 <a href="tel:+19093315093">+1 909 331 5093</a></div>
-        <div class="pill">✉️ <a href="mailto:dunesnyc.cafe@gmail.com">dunesnyc.cafe@gmail.com</a></div>
-        <div class="pill">📸 <a href="https://instagram.com/dunes_cafe" target="_blank">@dunes_cafe</a></div>
-      </div>
-      <div class="btns">
-        <a class="btn primary" href="#menu">☕ View Menu</a>
-        <a class="btn secondary" href="#events">🎪 Events & Weddings</a>
+    <!-- NAV -->
+    <div class="nav">
+      <div class="brand">DUNES CAFÉ</div>
+      <div>
+        <a href="#menu">Menu</a>
+        <a href="#events">Pop-Ups</a>
+        <a href="#weddings">Weddings</a>
+        <a href="mailto:dunesnyc.cafe@gmail.com">Contact</a>
       </div>
     </div>
 
-    <!-- STORY -->
-    <div id="story" class="card">
-      <div class="section-title">Our Story</div>
-      <p class="muted">
-        Dunes Café started as a farmers market stand serving Arabic chai and cardamom coffee, paired with homemade sweets.
-        We bring warm hospitality and bold flavor—perfect for neighborhood pop-ups, offices, and celebrations.
-      </p>
-    </div>
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1 class="h-title">Arabic Coffee & Chai — Crafted in NYC</h1>
+        <p class="h-sub">Cardamom coffee, spiced chai, and Arabic sweets for cafés, markets, offices, and weddings.</p>
+        <div class="cta">
+          <a class="btn primary" href="#events">Book a Pop-Up</a>
+          <a class="btn light" href="#menu">View Menu</a>
+        </div>
+        <div class="chipbar">
+          <div class="chip">📍 Manhattan, NYC</div>
+          <div class="chip">✉️ <a href="mailto:dunesnyc.cafe@gmail.com">dunesnyc.cafe@gmail.com</a></div>
+          <div class="chip">📞 <a href="tel:+19093315093">+1 909 331 5093</a></div>
+          <div class="chip">📸 <a href="https://instagram.com/dunes_cafe" target="_blank">@dunes_cafe</a></div>
+        </div>
+      </div>
+      <div class="imgph">Hero Image / Chai Pour</div>
+    </section>
 
     <!-- MENU -->
-    <div id="menu" class="card">
-      <div class="section-title">Signature Menu</div>
-      <p class="muted">Arabic-style drinks & sweets. Hot or iced. Custom spice levels and add-ons.</p>
+    <section id="menu" class="panel">
+      <h3 class="section-title">Signature Menu</h3>
+      <p class="muted">Arabic-style drinks & sweets. Hot or iced. Non-dairy options available.</p>
       <div class="grid two">
         <div>
           <ul>
             <li>Arabic Chai Latte — spiced black tea, milk</li>
-            <li>Cardamom-Infused Coffee — smooth, aromatic</li>
+            <li>Cardamom-Infused Coffee — smooth & aromatic</li>
             <li>Sweet Milk Coffee (“Gahwa” style)</li>
             <li>Add-ons: saffron, rose, pistachio, tahini drizzle</li>
           </ul>
         </div>
         <div class="note">
-          • High-volume ready (100–300 cups/event)<br/>
+          • High-volume ready (100–300 cups per event)<br/>
           • Branded pop-up bar, POS, signage<br/>
-          • Non-dairy options available
+          • Ideal for markets, offices, weddings
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- EVENTS / POP-UPS -->
-    <div id="events" class="card">
-      <div class="section-title">Events & Pop-Ups</div>
-      <p class="muted">Neighborhood markets, offices, and community gatherings. Recent highlights:</p>
+    <!-- EVENTS & POP-UPS -->
+    <section id="events" class="panel">
+      <h3 class="section-title">Pop-Ups & Events</h3>
+      <p class="muted">Arabic coffee & chai bar for markets, offices, and celebrations.</p>
       <div class="grid two">
         <div>
+          <h4>Houston</h4>
+          <div class="listline"><span>Montrose Farmers Market</span><span class="tag">Sundays</span></div>
+          <div class="listline"><span>Esplanade at Navigation Farmers Market</span><span class="tag">Weekends</span></div>
+          <div class="listline"><span>Houston Downtown Farmers Market</span><span class="tag">Seasonal</span></div>
+        </div>
+        <div>
+          <h4>New York City</h4>
           <div class="listline"><span>Dag Hammarskjöld Greenmarket (Midtown East)</span><span class="tag">Wednesdays</span></div>
-          <div class="listline"><span>Turtle Bay Community Pop-Up</span><span class="tag">Seasonal</span></div>
           <div class="listline"><span>Union Square Weekend Feature</span><span class="tag">High Volume</span></div>
-          <div class="listline"><span>Office Coffee Hour (Midtown)</span><span class="tag">Corporate</span></div>
-        </div>
-        <div class="note">
-          • Setup: 6’ bar, power optional, self-contained water<br/>
-          • Service: 2–5 hours per booking<br/>
-          • Insurance & permits on request
         </div>
       </div>
-      <div class="btns" style="margin-top:12px">
-        <a class="btn primary" href="mailto:dunesnyc.cafe@gmail.com?subject=Pop-up%20Booking%20Request">Request a Pop-Up</a>
-        <a class="btn secondary" href="#weddings">💍 Weddings</a>
+      <div class="cta" style="margin-top:14px">
+        <a class="btn primary" href="mailto:dunesnyc.cafe@gmail.com?subject=Pop-up%20Booking%20Request">Book a Pop-Up</a>
+        <a class="btn light" href="https://instagram.com/dunes_cafe" target="_blank">Instagram</a>
       </div>
-    </div>
+    </section>
 
     <!-- WEDDINGS -->
-    <div id="weddings" class="card">
-      <div class="section-title">Weddings & Private Events</div>
+    <section id="weddings" class="panel">
+      <h3 class="section-title">Weddings & Private Events</h3>
       <p class="muted">Arabic coffee & chai bar for receptions, dessert hours, and late-night resets.</p>
       <div class="grid two">
         <div>
           <ul>
             <li>Custom menu: saffron chai, rose-cardamom, pistachio</li>
             <li>Branded cups & signage to match your theme</li>
-            <li>Dessert pairing: ma’amoul & semolina pistachio cakes</li>
+            <li>Dessert pairing: ma’amoul & pistachio cakes</li>
             <li>Guest range: 50–400 (modular stations)</li>
           </ul>
         </div>
@@ -152,49 +214,15 @@
           • Venue coordination & COI as needed • NYC & nearby
         </div>
       </div>
-      <div class="btns">
+      <div class="cta" style="margin-top:14px">
         <a class="btn primary" href="mailto:dunesnyc.cafe@gmail.com?subject=Weddings%20Coffee%20Bar%20Inquiry">Request Quote</a>
-        <a class="btn secondary" href="tel:+19093315093">Talk Details</a>
+        <a class="btn light" href="tel:+19093315093">Talk Details</a>
       </div>
-    </div>
+    </section>
 
-    <!-- GALLERY (placeholders—swap with your photos/links) -->
-    <div id="gallery" class="card">
-      <div class="section-title">Gallery</div>
-      <div class="gallery">
-        <div class="tile">Pop-Up</div>
-        <div class="tile">Chai</div>
-        <div class="tile">Cardamom</div>
-        <div class="tile">Sweets</div>
-        <div class="tile">Market</div>
-        <div class="tile">Wedding</div>
-      </div>
-      <p class="muted" style="margin-top:10px">Want me to wire this to your Instagram posts automatically? I can do that too.</p>
-    </div>
-
-    <!-- TESTIMONIALS -->
-    <div id="testimonials" class="card">
-      <div class="section-title">Kind Words</div>
-      <div class="grid two">
-        <div class="quote">“The cardamom coffee was a hit—warm, fragrant, unforgettable.” — Office Event</div>
-        <div class="quote">“Perfect late-night chai bar at our wedding—our guests loved it.” — M.&A., NYC</div>
-      </div>
-    </div>
-
-    <!-- CONTACT -->
-    <div id="contact" class="card">
-      <div class="section-title">Contact</div>
-      <p class="muted">We’d love to serve your café, office, market, or celebration.</p>
-      <div class="btns">
-        <a class="btn primary" href="mailto:dunesnyc.cafe@gmail.com?subject=Dunes%20Caf%C3%A9%20Inquiry">Email</a>
-        <a class="btn secondary" href="tel:+19093315093">Call/Text</a>
-      </div>
-      <div class="pillbar" style="margin-top:12px">
-        <div class="pill">📸 <a href="https://instagram.com/dunes_cafe" target="_blank">@dunes_cafe</a></div>
-      </div>
-    </div>
-
-    <div class="footer">© 2025 Dunes Café • Ghaith Marji • dunesnyc.cafe@gmail.com</div>
+    <footer class="footer">
+      © 2025 Dunes Café • dunesnyc.cafe@gmail.com • Manhattan, NYC
+    </footer>
   </div>
 </body>
 </html>

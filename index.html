@@ -17,6 +17,7 @@
       --accent2:#C9A66B;
       --line:#E8E1D9;
       --muted:#6B5642;
+      --pistachio:#B5C8A2;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html,body{
@@ -52,6 +53,7 @@
     }
     .btn.primary{background:var(--espresso);color:#fff;border-color:#2f2217}
     .btn.light{background:#FFF5E8;color:#523A1E}
+
     /* PANELS */
     .panel{
       border:1px solid var(--line);
@@ -66,51 +68,44 @@
     ul{margin:10px 0 0 18px}
     .grid{display:grid;gap:18px}
     @media(min-width:860px){.grid.two{grid-template-columns:1fr 1fr}}
-    .note{
-      background:#FFF8EF;border:1px dashed #E9D7BD;padding:14px;border-radius:14px;color:#6B5642;font-size:14px;
-    }
-    /* LIST with descriptions */
-    .menu-item{margin-bottom:12px}
+
+    /* MENU styles */
+    .menu-hero{display:grid;gap:16px}
+    @media(min-width:860px){.menu-hero{grid-template-columns:1.2fr .8fr}}
+    .menu-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:16px}
+    .menu-item{margin-bottom:10px}
     .menu-name{font-weight:700}
-    .menu-desc{color:var(--muted);font-size:14px;margin-left:14px}
+    .menu-desc{color:var(--muted);font-size:14px;margin-left:12px}
+    .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .pill{background:#FFF9F0;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px;color:#6B5642}
+    .note{background:#FFF8EF;border:1px dashed #E9D7BD;padding:14px;border-radius:14px;color:#6B5642;font-size:14px;margin-top:12px}
+
+    /* Signature drink tiles */
+    .sig-grid{display:grid;gap:12px}
+    @media(min-width:620px){.sig-grid{grid-template-columns:1fr 1fr}}
+    .sig{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+    .sig img{display:block;width:100%;height:220px;object-fit:cover}
+    .sig .body{padding:12px}
+    .sig .title{font-weight:700;margin-bottom:4px}
+    .sig .sub{color:var(--muted);font-size:14px}
 
     /* EVENTS */
-    .listline{
-      display:flex;justify-content:space-between;gap:8px;border-bottom:1px dashed var(--line);padding:10px 0;font-size:15px;
-    }
+    .listline{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dashed var(--line);padding:10px 0;font-size:15px;}
     .tag{border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:12px;background:#FFF9F0;color:#7D6B57}
 
     /* FOOTER */
     .footer{margin-top:40px;text-align:center;color:#7D6B57;font-size:13px}
     .chipbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
     .chip{background:#FFF9F0;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px;color:#6B5642}
-    .imgph{aspect-ratio:1.2/1;border-radius:18px;border:1px solid var(--line);background:#F0E8DE;display:grid;place-items:center;color:#a1886a;font-weight:600;font-size:15px}
 
-    /* ===== Dunes – single-window gallery (auto from GitHub, no-crop; images + videos) ===== */
+    /* ===== Gallery (auto from GitHub, no-crop; images + videos) ===== */
     .dg-wrap{border:1px solid var(--line);background:#FFFFFF;border-radius:20px;padding:16px;box-shadow:0 10px 28px rgba(160,120,80,.08);max-width:1000px;margin:28px auto}
     .dg-title{font:800 22px/1.2 Inter,system-ui,sans-serif;color:var(--espresso);margin:0 0 10px 6px}
-
-    /* Flexible view: no fixed aspect ratio, show whole media */
     .dg-view{
-      position:relative;
-      background:#F5F0E8;
-      border:1px solid var(--line);
-      border-radius:14px;
-      overflow:hidden;
-      display:grid;
-      place-items:center;
-      min-height:320px;           /* nice initial height */
+      position:relative;background:#F5F0E8;border:1px solid var(--line);border-radius:14px;
+      overflow:hidden;display:grid;place-items:center;min-height:320px
     }
-    .dg-view img, .dg-view video{
-      max-width:100%;
-      max-height:80vh;            /* never taller than viewport */
-      width:auto;
-      height:auto;
-      object-fit:contain;         /* default: no cropping */
-      display:block;
-      background:#F5F0E8;
-    }
-
+    .dg-view img,.dg-view video{max-width:100%;max-height:80vh;width:auto;height:auto;object-fit:contain;display:block;background:#F5F0E8}
     .dg-nav{position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
     .dg-btn{pointer-events:auto;cursor:pointer;background:rgba(58,42,27,.75);color:#fff;border:0;width:42px;height:42px;border-radius:999px;display:grid;place-items:center;margin:0 10px}
     .dg-btn:active{transform:scale(.98)}
@@ -142,6 +137,7 @@
         <div class="cta">
           <a class="btn primary" href="#events">Book a Pop-Up</a>
           <a class="btn light" href="#menu">View Menu</a>
+          <a class="btn light" href="menu.pdf" target="_blank">Printable Menu (PDF)</a>
         </div>
         <div class="chipbar">
           <div class="chip">📍 Manhattan, NYC</div>
@@ -150,65 +146,83 @@
           <div class="chip">📸 <a href="https://instagram.com/dunes_cafe" target="_blank">@dunes_cafe</a></div>
         </div>
       </div>
-      <!-- Replace with your real hero image -->
-      <img src="images/hero-chai.jpg" alt="Dunes Café Arabic Chai Pour" style="border-radius:18px;border:1px solid var(--line);width:100%;height:auto;">
+      <!-- Keep hero image from /images; hide if missing -->
+      <img src="images/hero-chai.jpg" alt="Dunes Café Arabic Chai Pour" onerror="this.style.display='none';" style="border-radius:18px;border:1px solid var(--line);width:100%;height:auto;">
     </section>
 
-    <!-- MENU (updated) -->
+    <!-- MENU (premium, no prices) -->
     <section id="menu" class="panel">
-      <h3 class="section-title">Signature Menu</h3>
-      <p class="muted">Arabic-style drinks & sweets. Hot or iced. Dairy-free options available.</p>
+      <h3 class="section-title">Signature Drinks</h3>
+      <p class="muted">Arabic-inspired, Instagram-friendly, fast to serve.</p>
 
-      <div class="grid two">
-        <!-- Drinks -->
-        <div>
-          <div class="menu-item">
-            <div class="menu-name">Arabic Chai Latte</div>
-            <div class="menu-desc">Spiced black tea with cardamom, cinnamon, cloves & milk (hot or iced).</div>
+      <!-- Signature hero tiles using images from /images (hidden if missing) -->
+      <div class="sig-grid" style="margin-bottom:14px">
+        <div class="sig">
+          <img src="images/pistachio-rose.jpg" alt="Pistachio Rose Latte" onerror="this.parentElement.style.display='none';">
+          <div class="body">
+            <div class="title">Pistachio Rose Latte</div>
+            <div class="sub">Cardamom coffee • pistachio cream • rose drizzle • pistachio dust</div>
           </div>
-          <div class="menu-item">
-            <div class="menu-name">Cardamom Coffee</div>
-            <div class="menu-desc">Traditional Arabic-style brew infused with fragrant cardamom.</div>
+        </div>
+        <div class="sig">
+          <img src="images/saffron-rose-chai.jpg" alt="Saffron Rose Chai" onerror="this.parentElement.style.display='none';">
+          <div class="body">
+            <div class="title">Saffron Rose Chai</div>
+            <div class="sub">Silky chai • saffron threads • rose petals</div>
           </div>
-          <div class="menu-item">
-            <div class="menu-name">Sweet Milk Gahwa</div>
-            <div class="menu-desc">Smooth, lightly sweetened Arabic coffee.</div>
+        </div>
+        <div class="sig">
+          <img src="images/cardamom-cloud-brew.jpg" alt="Cardamom Cloud Brew" onerror="this.parentElement.style.display='none';">
+          <div class="body">
+            <div class="title">Cardamom Cloud Brew</div>
+            <div class="sub">Cold brew • cardamom cold foam • touch of date syrup</div>
           </div>
-          <div class="menu-item">
-            <div class="menu-name">Saffron Rose Chai</div>
-            <div class="menu-desc">Saffron threads & rose petals blended in silky milk tea.</div>
+        </div>
+        <div class="sig">
+          <img src="images/hibiscus-lemonade.jpg" alt="Pink Hibiscus Lemonade" onerror="this.parentElement.style.display='none';">
+          <div class="body">
+            <div class="title">Pink Hibiscus Lemonade</div>
+            <div class="sub">Hibiscus • rose • lemon • mint (caffeine-free)</div>
           </div>
-          <div class="menu-item">
-            <div class="menu-name">Iced Pistachio Chai <span class="muted" style="font-weight:600">(Seasonal)</span></div>
-            <div class="menu-desc">Cold-brewed tea with pistachio cream & crushed nuts.</div>
+        </div>
+      </div>
+
+      <!-- Core menu content -->
+      <div class="menu-hero">
+        <div class="menu-card">
+          <h4 style="margin-bottom:10px">Aromatic Classics</h4>
+          <div class="menu-item"><div class="menu-name">Arabic Cardamom Coffee</div><div class="menu-desc">Traditional Arabic brew infused with cardamom (Hot)</div></div>
+          <div class="menu-item"><div class="menu-name">Arabic Chai Latte</div><div class="menu-desc">Spiced black tea with cardamom, cinnamon, cloves (Hot/Iced)</div></div>
+          <div class="menu-item"><div class="menu-name">Sweet Milk Gahwa</div><div class="menu-desc">Smooth, lightly sweet Arabic coffee</div></div>
+          <div class="menu-item"><div class="menu-name">Black Coffee</div><div class="menu-desc">Bold and clean</div></div>
+
+          <div class="note">
+            <strong>Make It Yours</strong> — choose your milk & sweetener:
+            <div class="pills" style="margin-top:8px">
+              <span class="pill">Oat</span><span class="pill">Almond</span><span class="pill">Coconut</span><span class="pill">Whole</span>
+              <span class="pill">Honey</span><span class="pill">Date Syrup</span><span class="pill">Organic Cane</span><span class="pill">Stevia</span>
+            </div>
           </div>
         </div>
 
-        <!-- Sweets + Ops -->
-        <div>
-          <div class="menu-item">
-            <div class="menu-name">Date Ma’amoul</div>
-            <div class="menu-desc">Traditional shortbread cookies filled with dates.</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-name">Pistachio Bites</div>
-            <div class="menu-desc">Roasted pistachios with rose syrup & cardamom.</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-name">Semolina Cakes (Basbousa)</div>
-            <div class="menu-desc">Golden, moist, lightly sweet semolina cakes.</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-name">Tahini Halva Squares</div>
-            <div class="menu-desc">Sesame halva topped with pistachios.</div>
-          </div>
-
-          <div class="note" style="margin-top:12px">
-            <strong>Add-Ons & Upgrades:</strong> saffron drizzle • rose syrup • crushed pistachios • dairy-free milks (oat, almond, coconut)
-            <br><br>
-            • High-volume ready (100–300 cups per event) • Branded pop-up bar, POS, signage • Ideal for markets, offices, weddings
-          </div>
+        <div class="menu-card">
+          <h4 style="margin-bottom:10px">Savory Bites — Fresh Saj & Wraps</h4>
+          <div class="menu-item"><div class="menu-name">Manakish Za’atar</div><div class="menu-desc">Flatbread with za’atar & olive oil</div></div>
+          <div class="menu-item"><div class="menu-name">Cheese Manakish</div><div class="menu-desc">Melted halloumi/mozzarella blend</div></div>
+          <div class="menu-item"><div class="menu-name">Half & Half Manakish</div><div class="menu-desc">Za’atar + cheese</div></div>
+          <div class="menu-item"><div class="menu-name">Spinach & Onion Manakish</div><div class="menu-desc">Sumac, lemon, olive oil</div></div>
+          <div class="menu-item"><div class="menu-name">Labneh & Veggie Wrap</div><div class="menu-desc">Labneh, cucumber, mint, olive oil</div></div>
+          <div class="menu-item"><div class="menu-name">Pita Chips + Za’atar Yogurt Dip</div><div class="menu-desc">Snack cup</div></div>
         </div>
+      </div>
+
+      <div class="menu-card" style="margin-top:16px">
+        <h4 style="margin-bottom:10px">Sweets & Treats</h4>
+        <div class="menu-item"><div class="menu-name">Kunafa Cups</div><div class="menu-desc">Layered pastry, pistachio, rose drizzle</div></div>
+        <div class="menu-item"><div class="menu-name">Date Cookies</div><div class="menu-desc">Ma’amoul-style shortbread filled with dates</div></div>
+        <div class="menu-item"><div class="menu-name">Pistachio Bites</div><div class="menu-desc">Roasted pistachios with rose syrup & cardamom</div></div>
+        <div class="menu-item"><div class="menu-name">Sesame Halva Squares</div><div class="menu-desc">Tahini halva topped with pistachios</div></div>
+        <div class="menu-item"><div class="menu-name">Basbousa Cakes</div><div class="menu-desc">Moist semolina squares, hint of coconut</div></div>
       </div>
     </section>
 
@@ -253,7 +267,7 @@
           • Venue coordination & COI as needed • NYC & nearby
         </div>
       </div>
-      <div class="cta" style="margin-top:14px)">
+      <div class="cta" style="margin-top:14px">
         <a class="btn primary" href="mailto:dunesnyc.cafe@gmail.com?subject=Weddings%20Coffee%20Bar%20Inquiry">Request Quote</a>
         <a class="btn light" href="tel:+19093315093">Talk Details</a>
       </div>
@@ -279,7 +293,7 @@
   <script>
     const GH_OWNER = 'santiagomarji';
     const GH_REPO  = 'Dunes_Cafe';
-    const GH_PATH  = 'images'; // folder to scan
+    const GH_PATH  = 'images';
     const API_URL  = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`;
 
     const IMG_EXTS = ['.jpg','.jpeg','.png','.gif','.webp'];
@@ -308,21 +322,12 @@
             const isVideo = VID_EXTS.includes(ext);
             const isImage = IMG_EXTS.includes(ext);
             if (!isVideo && !isImage) return null;
-
-            // Optional per-file cover mode: filename like "003_market__cover.jpg"
             const isCover = /__cover\./i.test(name);
-
-            return {
-              type: isVideo ? 'video' : 'img',
-              src: x.download_url,
-              alt: lower.replace(/\..+$/,'').replace(/[-_]/g,' '),
-              cover: isCover
-            };
+            return { type: isVideo ? 'video' : 'img', src: x.download_url, alt: lower.replace(/\..+$/,'').replace(/[-_]/g,' '), cover:isCover };
           })
           .filter(Boolean)
-          .sort((a,b)=> a.src.localeCompare(b.src)); // control order with 001_, 002_, etc.
+          .sort((a,b)=> a.src.localeCompare(b.src));
 
-        // Build dots
         dotsEl.innerHTML = '';
         ITEMS.forEach((_, idx) => {
           const d = document.createElement('div');
@@ -346,7 +351,6 @@
     function render(index){
       const item = ITEMS[index];
       viewEl.innerHTML = '';
-
       const fit = item.cover ? 'cover' : 'contain';
 
       if(item.type === 'video'){
@@ -355,20 +359,14 @@
         v.controls = true;
         v.playsInline = true;
         v.preload = 'metadata';
-        v.style.objectFit = fit;
-        v.style.maxWidth = '100%';
-        v.style.maxHeight = '80vh';
-        // Uncomment for silent autoplay loop on videos:
-        // v.muted = true; v.autoplay = true; v.loop = true;
+        v.style.objectFit = fit; v.style.maxWidth='100%'; v.style.maxHeight='80vh';
         viewEl.appendChild(v);
       } else {
         const img = document.createElement('img');
         img.src = item.src;
         img.alt = item.alt || 'Dunes Café';
         img.loading = index === 0 ? 'eager' : 'lazy';
-        img.style.objectFit = fit;
-        img.style.maxWidth = '100%';
-        img.style.maxHeight = '80vh';
+        img.style.objectFit = fit; img.style.maxWidth='100%'; img.style.maxHeight='80vh';
         viewEl.appendChild(img);
       }
 
@@ -382,18 +380,13 @@
     prevBtn.addEventListener('click', prev);
     nextBtn.addEventListener('click', next);
 
-    // Keyboard arrows
     window.addEventListener('keydown', (e)=>{ if(e.key==='ArrowRight') next(); if(e.key==='ArrowLeft') prev(); });
 
-    // Touch swipe (mobile)
     viewEl.addEventListener('touchstart', (e)=>{ startX = e.touches[0].clientX; deltaX = 0; }, {passive:true});
     viewEl.addEventListener('touchmove',  (e)=>{ deltaX = e.touches[0].clientX - startX; }, {passive:true});
     viewEl.addEventListener('touchend',   ()=>{ if(Math.abs(deltaX)>40) (deltaX<0?next():prev()); });
 
-    // Kickoff
     loadFromGitHub();
-    // Optional auto-advance:
-    // setInterval(next, 6000);
   </script>
 </body>
 </html>

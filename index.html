@@ -4,68 +4,72 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dunes Café • Arabic Coffee & Chai NYC</title>
-  <meta name="description" content="Dunes Café — Arabic coffee, spiced chai, Arabic sweets, farmers market pop-ups, weddings & private events in NYC." />
+  <meta name="description" content="Dunes Café — Arabic coffee, spiced chai, savory manakish, and Arabic sweets. Pop-ups, weddings & private events in NYC." />
+
+  <!-- Canonical + favicon -->
+  <link rel="canonical" href="https://santiagomarji.github.io/Dunes_Cafe/">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dunes Café — Arabic Coffee & Chai NYC">
+  <meta property="og:description" content="Cardamom coffee, spiced chai, savory manakish & sweets. Pop-ups, weddings & private events in NYC.">
+  <meta property="og:url" content="https://santiagomarji.github.io/Dunes_Cafe/">
+  <meta property="og:image" content="https://santiagomarji.github.io/Dunes_Cafe/images/hero-chai.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dunes Café — Arabic Coffee & Chai NYC">
+  <meta name="twitter:description" content="Cardamom coffee, spiced chai, savory manakish & sweets. Pop-ups, weddings & private events in NYC.">
+  <meta name="twitter:image" content="https://santiagomarji.github.io/Dunes_Cafe/images/hero-chai.jpg">
+
+  <!-- Structured data: LocalBusiness / Cafe -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Dunes Café",
+    "image": "https://santiagomarji.github.io/Dunes_Cafe/images/hero-chai.jpg",
+    "email": "mailto:dunesnyc.cafe@gmail.com",
+    "telephone": "+19093315093",
+    "address": { "@type": "PostalAddress", "addressLocality": "Manhattan", "addressRegion": "NY", "addressCountry": "US" },
+    "url": "https://santiagomarji.github.io/Dunes_Cafe",
+    "sameAs": ["https://instagram.com/dunes_cafe"]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
   <style>
-    :root {
-      --bg:#FAF8F5;
-      --card:#FFFFFF;
-      --espresso:#3A2A1B;
-      --foam:#FFF9F3;
-      --accent:#8E5A2B;
-      --accent2:#C9A66B;
-      --line:#E8E1D9;
-      --muted:#6B5642;
-      --pistachio:#B5C8A2;
+    :root{
+      --bg:#FAF8F5; --card:#FFFFFF; --espresso:#3A2A1B; --foam:#FFF9F3;
+      --accent:#8E5A2B; --accent2:#C9A66B; --line:#E8E1D9; --muted:#6B5642; --pistachio:#B5C8A2;
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    html,body{
-      background:var(--bg);
-      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--espresso);
-      -webkit-font-smoothing:antialiased;
-    }
+    html,body{background:var(--bg);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--espresso);-webkit-font-smoothing:antialiased}
     a{color:var(--accent);text-decoration:none}
     .wrap{max-width:1050px;margin:0 auto;padding:28px 18px 64px}
+
     /* NAV */
     .nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
     .brand{font-weight:800;font-size:20px;letter-spacing:.3px}
-    .nav a{font-weight:600;margin-left:18px;opacity:.85}
+    .nav a{font-weight:600;margin-left:18px;opacity:.9}
+
     /* HERO */
-    .hero{
-      border:1px solid var(--line);
-      border-radius:26px;
-      background:linear-gradient(180deg,#fff,#FBF6EE);
-      padding:40px 28px;
-      display:grid;gap:20px;
-    }
+    .hero{border:1px solid var(--line);border-radius:26px;background:linear-gradient(180deg,#fff,#FBF6EE);padding:40px 28px;display:grid;gap:20px}
     @media(min-width:900px){.hero{grid-template-columns:1.2fr .8fr;align-items:center}}
     .h-title{font-size:42px;line-height:1.05;margin:0;color:var(--espresso)}
     .h-sub{color:var(--muted);margin:12px 0 0 0;font-size:16px}
     .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-    .btn{
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:12px 16px;
-      font-weight:600;
-      transition:.2s ease;
-    }
+    .btn{border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-weight:600;transition:.2s ease}
     .btn.primary{background:var(--espresso);color:#fff;border-color:#2f2217}
     .btn.light{background:#FFF5E8;color:#523A1E}
 
     /* PANELS */
-    .panel{
-      border:1px solid var(--line);
-      border-radius:22px;
-      background:var(--card);
-      padding:28px 24px;
-      margin-top:28px;
-      box-shadow:0 10px 28px rgba(160,120,80,.08)
-    }
+    .panel{border:1px solid var(--line);border-radius:22px;background:var(--card);padding:28px 24px;margin-top:28px;box-shadow:0 10px 28px rgba(160,120,80,.08)}
     .section-title{font-weight:800;font-size:22px;margin:0 0 10px}
     .muted{color:var(--muted)}
-    ul{margin:10px 0 0 18px}
     .grid{display:grid;gap:18px}
     @media(min-width:860px){.grid.two{grid-template-columns:1fr 1fr}}
 
@@ -76,12 +80,12 @@
     .menu-item{margin-bottom:10px}
     .menu-name{font-weight:700}
     .menu-desc{color:var(--muted);font-size:14px;margin-left:12px}
-    .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-    .pill{background:#FFF9F0;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px;color:#6B5642}
     .note{background:#FFF8EF;border:1px dashed #E9D7BD;padding:14px;border-radius:14px;color:#6B5642;font-size:14px;margin-top:12px}
+    .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .pill{background:#FFF9F0;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px;color:#6B5642}
 
     /* Signature drink tiles */
-    .sig-grid{display:grid;gap:12px}
+    .sig-grid{display:grid;gap:12px;margin-bottom:14px}
     @media(min-width:620px){.sig-grid{grid-template-columns:1fr 1fr}}
     .sig{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
     .sig img{display:block;width:100%;height:220px;object-fit:cover}
@@ -90,7 +94,7 @@
     .sig .sub{color:var(--muted);font-size:14px}
 
     /* EVENTS */
-    .listline{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dashed var(--line);padding:10px 0;font-size:15px;}
+    .listline{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dashed var(--line);padding:10px 0;font-size:15px}
     .tag{border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:12px;background:#FFF9F0;color:#7D6B57}
 
     /* FOOTER */
@@ -98,13 +102,10 @@
     .chipbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
     .chip{background:#FFF9F0;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px;color:#6B5642}
 
-    /* ===== Gallery (auto from GitHub, no-crop; images + videos) ===== */
+    /* ===== Gallery (auto from GitHub, cached, no-crop; images + videos) ===== */
     .dg-wrap{border:1px solid var(--line);background:#FFFFFF;border-radius:20px;padding:16px;box-shadow:0 10px 28px rgba(160,120,80,.08);max-width:1000px;margin:28px auto}
     .dg-title{font:800 22px/1.2 Inter,system-ui,sans-serif;color:var(--espresso);margin:0 0 10px 6px}
-    .dg-view{
-      position:relative;background:#F5F0E8;border:1px solid var(--line);border-radius:14px;
-      overflow:hidden;display:grid;place-items:center;min-height:320px
-    }
+    .dg-view{position:relative;background:#F5F0E8;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;place-items:center;min-height:320px}
     .dg-view img,.dg-view video{max-width:100%;max-height:80vh;width:auto;height:auto;object-fit:contain;display:block;background:#F5F0E8}
     .dg-nav{position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
     .dg-btn{pointer-events:auto;cursor:pointer;background:rgba(58,42,27,.75);color:#fff;border:0;width:42px;height:42px;border-radius:999px;display:grid;place-items:center;margin:0 10px}
@@ -133,21 +134,21 @@
     <section class="hero">
       <div>
         <h1 class="h-title">Arabic Coffee & Chai — Crafted in NYC</h1>
-        <p class="h-sub">Cardamom coffee, spiced chai, and Arabic sweets for cafés, markets, offices, and weddings.</p>
+        <p class="h-sub">Cardamom coffee, spiced chai, savory manakish & Arabic sweets for markets, offices, and weddings.</p>
         <div class="cta">
           <a class="btn primary" href="#events">Book a Pop-Up</a>
           <a class="btn light" href="#menu">View Menu</a>
-          <a class="btn light" href="menu.pdf" target="_blank">Printable Menu (PDF)</a>
+          <a class="btn light" href="menu.pdf" target="_blank" rel="noopener">Printable Menu (PDF)</a>
         </div>
         <div class="chipbar">
           <div class="chip">📍 Manhattan, NYC</div>
           <div class="chip">✉️ <a href="mailto:dunesnyc.cafe@gmail.com">dunesnyc.cafe@gmail.com</a></div>
           <div class="chip">📞 <a href="tel:+19093315093">+1 909 331 5093</a></div>
-          <div class="chip">📸 <a href="https://instagram.com/dunes_cafe" target="_blank">@dunes_cafe</a></div>
+          <div class="chip">📸 <a href="https://instagram.com/dunes_cafe" target="_blank" rel="noopener">@dunes_cafe</a></div>
         </div>
       </div>
-      <!-- Keep hero image from /images; hide if missing -->
-      <img src="images/hero-chai.jpg" alt="Dunes Café Arabic Chai Pour" onerror="this.style.display='none';" style="border-radius:18px;border:1px solid var(--line);width:100%;height:auto;">
+      <!-- Hero image from /images; hides if missing -->
+      <img src="images/hero-chai.jpg" alt="Dunes Café — Arabic Chai Pour" onerror="this.style.display='none';" style="border-radius:18px;border:1px solid var(--line);width:100%;height:auto;">
     </section>
 
     <!-- MENU (premium, no prices) -->
@@ -155,8 +156,8 @@
       <h3 class="section-title">Signature Drinks</h3>
       <p class="muted">Arabic-inspired, Instagram-friendly, fast to serve.</p>
 
-      <!-- Signature hero tiles using images from /images (hidden if missing) -->
-      <div class="sig-grid" style="margin-bottom:14px">
+      <!-- Signature hero tiles using images from /images (tiles auto-hide if image missing) -->
+      <div class="sig-grid">
         <div class="sig">
           <img src="images/pistachio-rose.jpg" alt="Pistachio Rose Latte" onerror="this.parentElement.style.display='none';">
           <div class="body">
@@ -245,7 +246,7 @@
       </div>
       <div class="cta" style="margin-top:14px">
         <a class="btn primary" href="mailto:dunesnyc.cafe@gmail.com?subject=Pop-up%20Booking%20Request">Book a Pop-Up</a>
-        <a class="btn light" href="https://instagram.com/dunes_cafe" target="_blank">Instagram</a>
+        <a class="btn light" href="https://instagram.com/dunes_cafe" target="_blank" rel="noopener">Instagram</a>
       </div>
     </section>
 
@@ -273,15 +274,15 @@
       </div>
     </section>
 
-    <!-- GALLERY (auto: images + videos from /images via GitHub API; no cropping) -->
+    <!-- GALLERY (auto: images + videos from /images via GitHub API; cached; no cropping) -->
     <section id="gallery" class="dg-wrap">
       <h3 class="dg-title">Gallery</h3>
       <div class="dg-view" id="dg-view"><!-- media injected by JS --></div>
       <div class="dg-nav">
-        <button class="dg-btn" id="dg-prev" aria-label="Previous">‹</button>
-        <button class="dg-btn" id="dg-next" aria-label="Next">›</button>
+        <button class="dg-btn" id="dg-prev" aria-label="Previous slide">‹</button>
+        <button class="dg-btn" id="dg-next" aria-label="Next slide">›</button>
       </div>
-      <div class="dg-dots" id="dg-dots"></div>
+      <div class="dg-dots" id="dg-dots" aria-label="Gallery pagination"></div>
     </section>
 
     <footer class="footer">
@@ -289,7 +290,7 @@
     </footer>
   </div>
 
-  <!-- Auto gallery: fetch /images via GitHub API (free, no token) -->
+  <!-- Auto gallery: fetch /images via GitHub API (free, cached, no token) -->
   <script>
     const GH_OWNER = 'santiagomarji';
     const GH_REPO  = 'Dunes_Cafe';
@@ -298,6 +299,8 @@
 
     const IMG_EXTS = ['.jpg','.jpeg','.png','.gif','.webp'];
     const VID_EXTS = ['.mp4','.webm','.ogg'];
+    const CACHE_KEY = 'dunes_gallery_v1';
+    const CACHE_TTL_MS = 1000 * 60 * 30; // 30 minutes
 
     const viewEl = document.getElementById('dg-view');
     const dotsEl = document.getElementById('dg-dots');
@@ -307,45 +310,55 @@
     let ITEMS = [];
     let i = 0, startX = 0, deltaX = 0;
 
-    async function loadFromGitHub(){
+    // Optional static fallback entries if API+cache fail (uncomment & point to your files)
+    const FALLBACK = [
+      // { type:'img', src:'images/20240616_101301.jpg', alt:'market chai' },
+      // { type:'img', src:'images/20240313_211027.jpg', alt:'arabic sweets' },
+      // { type:'video', src:'images/dunes_pour.mp4' }
+    ];
+
+    function readCache(){
       try{
-        const res = await fetch(API_URL, { headers: { 'Accept':'application/vnd.github.v3+json' }});
-        if(!res.ok) throw new Error('GitHub API error ' + res.status);
-        const list = await res.json();
+        const raw = localStorage.getItem(CACHE_KEY);
+        if(!raw) return null;
+        const json = JSON.parse(raw);
+        if(Date.now() - json.time > CACHE_TTL_MS) return null;
+        return json.items;
+      }catch{ return null; }
+    }
+    function writeCache(items){
+      try{ localStorage.setItem(CACHE_KEY, JSON.stringify({ time: Date.now(), items })); }catch{}
+    }
 
-        ITEMS = list
-          .filter(x => x.type === 'file' && x.download_url)
-          .map(x => {
-            const name = x.name;
-            const lower = name.toLowerCase();
-            const ext  = lower.slice(lower.lastIndexOf('.'));
-            const isVideo = VID_EXTS.includes(ext);
-            const isImage = IMG_EXTS.includes(ext);
-            if (!isVideo && !isImage) return null;
-            const isCover = /__cover\./i.test(name);
-            return { type: isVideo ? 'video' : 'img', src: x.download_url, alt: lower.replace(/\..+$/,'').replace(/[-_]/g,' '), cover:isCover };
-          })
-          .filter(Boolean)
-          .sort((a,b)=> a.src.localeCompare(b.src));
+    async function fetchGitHub(){
+      const res = await fetch(API_URL, { headers: { 'Accept':'application/vnd.github.v3+json' }});
+      if(!res.ok) throw new Error('GitHub API ' + res.status);
+      const list = await res.json();
+      return list
+        .filter(x => x.type === 'file' && x.download_url)
+        .map(x => {
+          const name  = x.name;
+          const lower = name.toLowerCase();
+          const ext   = lower.slice(lower.lastIndexOf('.'));
+          const isVideo = VID_EXTS.includes(ext);
+          const isImage = IMG_EXTS.includes(ext);
+          if (!isVideo && !isImage) return null;
+          const isCover = /__cover\./i.test(name);
+          return { type: isVideo ? 'video' : 'img', src: x.download_url, alt: lower.replace(/\..+$/,'').replace(/[-_]/g,' '), cover:isCover };
+        })
+        .filter(Boolean)
+        .sort((a,b)=> a.src.localeCompare(b.src)); // control order with filename (001_, 002_, etc.)
+    }
 
-        dotsEl.innerHTML = '';
-        ITEMS.forEach((_, idx) => {
-          const d = document.createElement('div');
-          d.className = 'dg-dot' + (idx===0 ? ' is-active':'');
-          d.addEventListener('click', () => go(idx));
-          dotsEl.appendChild(d);
-        });
-
-        if(ITEMS.length === 0){
-          viewEl.innerHTML = '<div style="color:#6B5642;padding:16px">Add images/videos to the <code>/images</code> folder to populate the gallery.</div>';
-          return;
-        }
-
-        render(0);
-      }catch(err){
-        console.error(err);
-        viewEl.innerHTML = '<div style="color:#6B5642;padding:16px">Could not load gallery. Try again later.</div>';
-      }
+    function buildDots(){
+      dotsEl.innerHTML = '';
+      ITEMS.forEach((_, idx) => {
+        const d = document.createElement('button');
+        d.className = 'dg-dot' + (idx===0 ? ' is-active':'');
+        d.setAttribute('aria-label', 'Go to slide ' + (idx+1));
+        d.addEventListener('click', () => go(idx));
+        dotsEl.appendChild(d);
+      });
     }
 
     function render(index){
@@ -359,6 +372,8 @@
         v.controls = true;
         v.playsInline = true;
         v.preload = 'metadata';
+        // Uncomment for silent autoplay:
+        // v.muted = true; v.autoplay = true; v.loop = true;
         v.style.objectFit = fit; v.style.maxWidth='100%'; v.style.maxHeight='80vh';
         viewEl.appendChild(v);
       } else {
@@ -369,7 +384,6 @@
         img.style.objectFit = fit; img.style.maxWidth='100%'; img.style.maxHeight='80vh';
         viewEl.appendChild(img);
       }
-
       [...dotsEl.children].forEach((dot, k)=>dot.classList.toggle('is-active', k===index));
     }
 
@@ -377,16 +391,36 @@
     function next(){ go(i+1); }
     function prev(){ go(i-1); }
 
-    prevBtn.addEventListener('click', prev);
     nextBtn.addEventListener('click', next);
-
+    prevBtn.addEventListener('click', prev);
     window.addEventListener('keydown', (e)=>{ if(e.key==='ArrowRight') next(); if(e.key==='ArrowLeft') prev(); });
 
     viewEl.addEventListener('touchstart', (e)=>{ startX = e.touches[0].clientX; deltaX = 0; }, {passive:true});
     viewEl.addEventListener('touchmove',  (e)=>{ deltaX = e.touches[0].clientX - startX; }, {passive:true});
     viewEl.addEventListener('touchend',   ()=>{ if(Math.abs(deltaX)>40) (deltaX<0?next():prev()); });
 
-    loadFromGitHub();
+    async function loadGallery(){
+      // 1) Cache
+      const cached = readCache();
+      if(cached && cached.length){ ITEMS = cached; buildDots(); render(0); }
+      // 2) Refresh in background
+      try{
+        const fresh = await fetchGitHub();
+        if(fresh.length){
+          ITEMS = fresh; writeCache(fresh); buildDots(); render(0);
+        } else if(!cached || !cached.length){
+          // 3) Fallback
+          if(FALLBACK.length){ ITEMS = FALLBACK; buildDots(); render(0); }
+          else { viewEl.innerHTML = '<div style="color:#6B5642;padding:16px">Add images/videos to the <code>/images</code> folder to populate the gallery.</div>'; }
+        }
+      }catch{
+        if(!cached || !cached.length){
+          if(FALLBACK.length){ ITEMS = FALLBACK; buildDots(); render(0); }
+          else { viewEl.innerHTML = '<div style="color:#6B5642;padding:16px">Could not load gallery. Try again later.</div>'; }
+        }
+      }
+    }
+    loadGallery();
   </script>
 </body>
 </html>

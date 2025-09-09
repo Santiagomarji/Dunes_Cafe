@@ -118,6 +118,19 @@
       font-weight:600;
       font-size:15px;
     }
+
+    /* ===== Dunes – Premium single-window gallery ===== */
+    .dg-wrap{border:1px solid var(--line);background:#FFFFFF;border-radius:20px;padding:16px;box-shadow:0 10px 28px rgba(160,120,80,.08);max-width:1000px;margin:28px auto}
+    .dg-title{font:800 22px/1.2 Inter,system-ui,sans-serif;color:var(--espresso);margin:0 0 10px 6px}
+    .dg-view{position:relative;aspect-ratio:16/10;max-height:70vh;background:#F5F0E8;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+    .dg-view img{width:100%;height:100%;object-fit:cover;display:block}
+    .dg-nav{position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
+    .dg-btn{pointer-events:auto;cursor:pointer;background:rgba(58,42,27,.75);color:#fff;border:0;width:42px;height:42px;border-radius:999px;display:grid;place-items:center;margin:0 10px}
+    .dg-btn:active{transform:scale(.98)}
+    .dg-dots{display:flex;gap:8px;justify-content:center;margin-top:12px}
+    .dg-dot{width:8px;height:8px;border-radius:999px;background:#E0D6C9}
+    .dg-dot.is-active{background:#8E5A2B}
+    @media (hover:hover){.dg-btn:hover{background:#3A2A1B}}
   </style>
 </head>
 <body>
@@ -129,6 +142,7 @@
         <a href="#menu">Menu</a>
         <a href="#events">Pop-Ups</a>
         <a href="#weddings">Weddings</a>
+        <a href="#gallery">Gallery</a>
         <a href="mailto:dunesnyc.cafe@gmail.com">Contact</a>
       </div>
     </div>
@@ -220,9 +234,70 @@
       </div>
     </section>
 
+    <!-- GALLERY (single-window slider) -->
+    <section id="gallery" class="dg-wrap">
+      <h3 class="dg-title">Gallery</h3>
+      <div class="dg-view">
+        <img id="dg-img" src="images/IMG_001.jpg" alt="Dunes Café gallery image" loading="eager">
+        <div class="dg-nav">
+          <button class="dg-btn" id="dg-prev" aria-label="Previous">‹</button>
+          <button class="dg-btn" id="dg-next" aria-label="Next">›</button>
+        </div>
+      </div>
+      <div class="dg-dots" id="dg-dots"></div>
+    </section>
+
     <footer class="footer">
       © 2025 Dunes Café • dunesnyc.cafe@gmail.com • Manhattan, NYC
     </footer>
   </div>
+
+  <!-- Gallery logic -->
+  <script>
+    // ➊ List your images (store files in /images in your repo)
+    const DG_IMAGES = [
+      "images/20240616_101301.jpg",
+      "images/20240313_211027.jpg",
+    
+    ];
+
+    // ➋ Setup
+    const imgEl = document.getElementById('dg-img');
+    const dotsEl = document.getElementById('dg-dots');
+    const prevBtn = document.getElementById('dg-prev');
+    const nextBtn = document.getElementById('dg-next');
+    let i = 0, startX = 0, deltaX = 0;
+
+    // Build dots
+    DG_IMAGES.forEach((_, idx) => {
+      const d = document.createElement('div');
+      d.className = 'dg-dot' + (idx===0 ? ' is-active':'');
+      d.addEventListener('click', () => go(idx));
+      dotsEl.appendChild(d);
+    });
+
+    function show(index){
+      imgEl.src = DG_IMAGES[index];
+      imgEl.loading = index === 0 ? 'eager' : 'lazy';
+      [...dotsEl.children].forEach((dot, k)=>dot.classList.toggle('is-active', k===index));
+    }
+    function go(index){ i = (index + DG_IMAGES.length) % DG_IMAGES.length; show(i); }
+    function next(){ go(i+1); }
+    function prev(){ go(i-1); }
+
+    nextBtn.addEventListener('click', next);
+    prevBtn.addEventListener('click', prev);
+
+    // Keyboard arrows
+    window.addEventListener('keydown', (e)=>{ if(e.key==='ArrowRight') next(); if(e.key==='ArrowLeft') prev(); });
+
+    // Touch swipe (mobile)
+    imgEl.addEventListener('touchstart', (e)=>{ startX = e.touches[0].clientX; deltaX = 0; }, {passive:true});
+    imgEl.addEventListener('touchmove', (e)=>{ deltaX = e.touches[0].clientX - startX; }, {passive:true});
+    imgEl.addEventListener('touchend', ()=>{ if(Math.abs(deltaX)>40) (deltaX<0?next():prev()); });
+
+    // Optional: auto-advance every 6s
+    // setInterval(next, 6000);
+  </script>
 </body>
 </html>

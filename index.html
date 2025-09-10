@@ -8,7 +8,7 @@
 
   <!-- Canonical + favicon -->
   <link rel="canonical" href="https://santiagomarji.github.io/Dunes_Cafe/">
-  <link rel="icon" href="images/favicon.jpg" type="image/png">
+  <link rel="icon" href="images/favicon.jfavicon.jpg" type="image/png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -59,7 +59,7 @@
     /* HERO */
     .hero{border:1px solid var(--line);border-radius:26px;background:linear-gradient(180deg,#fff,#FBF6EE);padding:40px 28px;display:grid;gap:20px}
     @media(min-width:900px){.hero{grid-template-columns:1.2fr .8fr;align-items:center}}
-    .h-title{font-size:42px;line-height:1.05;margin:0;color:var(--espresso)}
+    .h-title{font-size:42px;line-height:1.05;margin:0}
     .h-sub{color:var(--muted);margin:12px 0 0 0;font-size:16px}
     .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
     .btn{border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-weight:600;transition:.2s ease}
@@ -91,7 +91,7 @@
     .sig img{display:block;width:100%;height:220px;object-fit:cover}
     .sig .body{padding:12px}
     .sig .title{font-weight:700;margin-bottom:4px}
-    .sig .sub{color:var(--muted);font-size:14px}
+    .sig .sub{color:#7b6a58;font-size:14px}
 
     /* EVENTS */
     .listline{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dashed var(--line);padding:10px 0;font-size:15px}
@@ -104,7 +104,7 @@
 
     /* ===== Gallery (auto from GitHub, cached, no-crop; images + videos) ===== */
     .dg-wrap{border:1px solid var(--line);background:#FFFFFF;border-radius:20px;padding:16px;box-shadow:0 10px 28px rgba(160,120,80,.08);max-width:1000px;margin:28px auto}
-    .dg-title{font:800 22px/1.2 Inter,system-ui,sans-serif;color:var(--espresso);margin:0 0 10px 6px}
+    .dg-title{font:800 22px/1.2 Inter,system-ui,sans-serif;margin:0 0 10px 6px}
     .dg-view{position:relative;background:#F5F0E8;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;place-items:center;min-height:320px}
     .dg-view img,.dg-view video{max-width:100%;max-height:80vh;width:auto;height:auto;object-fit:contain;display:block;background:#F5F0E8}
     .dg-nav{position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
@@ -151,79 +151,77 @@
       <img src="images/hero-chai.jpg" alt="Dunes Café — Arabic Chai Pour" onerror="this.style.display='none';" style="border-radius:18px;border:1px solid var(--line);width:100%;height:auto;">
     </section>
 
-    <!-- MENU (premium, no prices) -->
+    <!-- ===================== MENU (DRINKS LEFT • FOOD RIGHT) ===================== -->
     <section id="menu" class="panel">
-      <h3 class="section-title">Signature Drinks</h3>
-      <p class="muted">Arabic-inspired, Instagram-friendly, fast to serve.</p>
+      <h3 class="section-title">Menu</h3>
+      <p class="muted">Arabic-inspired drinks, savory bites & sweets. All drinks customizable — alt milks & natural sweeteners.</p>
 
-      <!-- Signature hero tiles using images from /images (tiles auto-hide if image missing) -->
-      <div class="sig-grid">
-        <div class="sig">
-          <img src="images/pistachio-rose.jpg" alt="Pistachio Rose Latte" onerror="this.parentElement.style.display='none';">
-          <div class="body">
-            <div class="title">Pistachio Rose Latte</div>
-            <div class="sub">Cardamom coffee • pistachio cream • rose drizzle • pistachio dust</div>
+      <div class="grid two" style="align-items:start">
+        <!-- ========== DRINKS (ALL TOGETHER) ========== -->
+        <div>
+          <!-- Signature tiles (auto-hide if image missing) -->
+          <div class="sig-grid" style="margin-bottom:14px">
+            <div class="sig">
+              <img src="images/pistachio-rose.jpg" alt="Pistachio Rose Latte" onerror="this.parentElement.style.display='none';">
+              <div class="body">
+                <div class="title">Pistachio Rose Latte</div>
+                <div class="sub">Cardamom coffee • pistachio cream • rose drizzle • pistachio dust</div>
+              </div>
+            </div>
+            <div class="sig">
+              <img src="images/saffron-rose-chai.jpg" alt="Saffron Rose Chai" onerror="this.parentElement.style.display='none';">
+              <div class="body">
+                <div class="title">Saffron Rose Chai</div>
+                <div class="sub">Silky chai • saffron threads • rose petals</div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="sig">
-          <img src="images/saffron-rose-chai.jpg" alt="Saffron Rose Chai" onerror="this.parentElement.style.display='none';">
-          <div class="body">
-            <div class="title">Saffron Rose Chai</div>
-            <div class="sub">Silky chai • saffron threads • rose petals</div>
-          </div>
-        </div>
-        <div class="sig">
-          <img src="images/cardamom-cloud-brew.jpg" alt="Cardamom Cloud Brew" onerror="this.parentElement.style.display='none';">
-          <div class="body">
-            <div class="title">Cardamom Cloud Brew</div>
-            <div class="sub">Cold brew • cardamom cold foam • touch of date syrup</div>
-          </div>
-        </div>
-        <div class="sig">
-          <img src="images/hibiscus-lemonade.jpg" alt="Pink Hibiscus Lemonade" onerror="this.parentElement.style.display='none';">
-          <div class="body">
-            <div class="title">Pink Hibiscus Lemonade</div>
-            <div class="sub">Hibiscus • rose • lemon • mint (caffeine-free)</div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Core menu content -->
-      <div class="menu-hero">
-        <div class="menu-card">
-          <h4 style="margin-bottom:10px">Aromatic Classics</h4>
-          <div class="menu-item"><div class="menu-name">Arabic Cardamom Coffee</div><div class="menu-desc">Traditional Arabic brew infused with cardamom (Hot)</div></div>
-          <div class="menu-item"><div class="menu-name">Arabic Chai Latte</div><div class="menu-desc">Spiced black tea with cardamom, cinnamon, cloves (Hot/Iced)</div></div>
-          <div class="menu-item"><div class="menu-name">Sweet Milk Gahwa</div><div class="menu-desc">Smooth, lightly sweet Arabic coffee</div></div>
-          <div class="menu-item"><div class="menu-name">Black Coffee</div><div class="menu-desc">Bold and clean</div></div>
+          <div class="menu-card">
+            <h4 style="margin-bottom:8px">Signature Drinks</h4>
+            <div class="menu-item"><div class="menu-name">Pistachio Rose Latte</div><div class="menu-desc">Cardamom coffee, pistachio cream, rose drizzle, pistachio</div></div>
+            <div class="menu-item"><div class="menu-name">Saffron Rose Chai</div><div class="menu-desc">Spiced chai with saffron threads & rose petals</div></div>
+            <div class="menu-item"><div class="menu-name">Cardamom Cloud Brew</div><div class="menu-desc">Cold brew topped with cardamom cold foam & date syrup</div></div>
+            <div class="menu-item"><div class="menu-name">Iced Pistachio Chai (Seasonal)</div><div class="menu-desc">Cold-brew chai, pistachio cream, crushed nuts</div></div>
+            <div class="menu-item"><div class="menu-name">Pink Hibiscus Lemonade</div><div class="menu-desc">Hibiscus, rose, lemon, mint (caffeine-free)</div></div>
 
-          <div class="note">
-            <strong>Make It Yours</strong> — choose your milk & sweetener:
-            <div class="pills" style="margin-top:8px">
-              <span class="pill">Oat</span><span class="pill">Almond</span><span class="pill">Coconut</span><span class="pill">Whole</span>
-              <span class="pill">Honey</span><span class="pill">Date Syrup</span><span class="pill">Organic Cane</span><span class="pill">Stevia</span>
+            <h4 style="margin:16px 0 8px">Aromatic Classics</h4>
+            <div class="menu-item"><div class="menu-name">Arabic Cardamom Coffee</div><div class="menu-desc">Traditional Arabic brew infused with cardamom (Hot)</div></div>
+            <div class="menu-item"><div class="menu-name">Arabic Chai Latte</div><div class="menu-desc">Spiced black tea with cardamom, cinnamon, cloves (Hot/Iced)</div></div>
+            <div class="menu-item"><div class="menu-name">Sweet Milk Gahwa</div><div class="menu-desc">Smooth, lightly sweet Arabic coffee</div></div>
+            <div class="menu-item"><div class="menu-name">Black Coffee</div><div class="menu-desc">Bold and clean</div></div>
+
+            <div class="note">
+              <strong>Make It Yours</strong> — choose your milk & sweetener:
+              <div class="pills" style="margin-top:8px">
+                <span class="pill">Oat</span><span class="pill">Almond</span><span class="pill">Coconut</span><span class="pill">Whole</span>
+                <span class="pill">Honey</span><span class="pill">Date Syrup</span><span class="pill">Organic Cane</span><span class="pill">Stevia</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="menu-card">
-          <h4 style="margin-bottom:10px">Savory Bites — Fresh Saj & Wraps</h4>
-          <div class="menu-item"><div class="menu-name">Manakish Za’atar</div><div class="menu-desc">Flatbread with za’atar & olive oil</div></div>
-          <div class="menu-item"><div class="menu-name">Cheese Manakish</div><div class="menu-desc">Melted halloumi/mozzarella blend</div></div>
-          <div class="menu-item"><div class="menu-name">Half & Half Manakish</div><div class="menu-desc">Za’atar + cheese</div></div>
-          <div class="menu-item"><div class="menu-name">Spinach & Onion Manakish</div><div class="menu-desc">Sumac, lemon, olive oil</div></div>
-          <div class="menu-item"><div class="menu-name">Labneh & Veggie Wrap</div><div class="menu-desc">Labneh, cucumber, mint, olive oil</div></div>
-          <div class="menu-item"><div class="menu-name">Pita Chips + Za’atar Yogurt Dip</div><div class="menu-desc">Snack cup</div></div>
-        </div>
-      </div>
+        <!-- ========== FOOD (ALL TOGETHER) ========== -->
+        <div>
+          <div class="menu-card">
+            <h4 style="margin-bottom:8px">Savory Bites — Fresh Saj & Wraps</h4>
+            <div class="menu-item"><div class="menu-name">Manakish Za’atar</div><div class="menu-desc">Flatbread with za’atar & olive oil</div></div>
+            <div class="menu-item"><div class="menu-name">Cheese Manakish</div><div class="menu-desc">Melted halloumi/mozzarella blend</div></div>
+            <div class="menu-item"><div class="menu-name">Half & Half Manakish</div><div class="menu-desc">Za’atar + cheese</div></div>
+            <div class="menu-item"><div class="menu-name">Spinach & Onion Manakish</div><div class="menu-desc">Sumac, lemon, olive oil</div></div>
+            <div class="menu-item"><div class="menu-name">Labneh & Veggie Wrap</div><div class="menu-desc">Labneh, cucumber, mint, olive oil</div></div>
+            <div class="menu-item"><div class="menu-name">Pita Chips + Za’atar Yogurt Dip</div><div class="menu-desc">Snack cup</div></div>
+          </div>
 
-      <div class="menu-card" style="margin-top:16px">
-        <h4 style="margin-bottom:10px">Sweets & Treats</h4>
-        <div class="menu-item"><div class="menu-name">Kunafa Cups</div><div class="menu-desc">Layered pastry, pistachio, rose drizzle</div></div>
-        <div class="menu-item"><div class="menu-name">Date Cookies</div><div class="menu-desc">Ma’amoul-style shortbread filled with dates</div></div>
-        <div class="menu-item"><div class="menu-name">Pistachio Bites</div><div class="menu-desc">Roasted pistachios with rose syrup & cardamom</div></div>
-        <div class="menu-item"><div class="menu-name">Sesame Halva Squares</div><div class="menu-desc">Tahini halva topped with pistachios</div></div>
-        <div class="menu-item"><div class="menu-name">Basbousa Cakes</div><div class="menu-desc">Moist semolina squares, hint of coconut</div></div>
+          <div class="menu-card" style="margin-top:16px">
+            <h4 style="margin-bottom:8px">Sweets & Treats</h4>
+            <div class="menu-item"><div class="menu-name">Kunafa Cups</div><div class="menu-desc">Layered pastry, pistachio, rose drizzle</div></div>
+            <div class="menu-item"><div class="menu-name">Date Cookies (Ma’amoul)</div><div class="menu-desc">Shortbread filled with dates</div></div>
+            <div class="menu-item"><div class="menu-name">Pistachio Bites</div><div class="menu-desc">Roasted pistachios with rose syrup & cardamom</div></div>
+            <div class="menu-item"><div class="menu-name">Sesame Halva Squares</div><div class="menu-desc">Tahini halva topped with pistachios</div></div>
+            <div class="menu-item"><div class="menu-name">Basbousa Cakes</div><div class="menu-desc">Moist semolina squares, hint of coconut</div></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -347,7 +345,7 @@
           return { type: isVideo ? 'video' : 'img', src: x.download_url, alt: lower.replace(/\..+$/,'').replace(/[-_]/g,' '), cover:isCover };
         })
         .filter(Boolean)
-        .sort((a,b)=> a.src.localeCompare(b.src)); // control order with filename (001_, 002_, etc.)
+        .sort((a,b)=> a.src.localeCompare(b.src)); // order by filename (001_, 002_, etc.)
     }
 
     function buildDots(){
@@ -372,8 +370,7 @@
         v.controls = true;
         v.playsInline = true;
         v.preload = 'metadata';
-        // Uncomment for silent autoplay:
-        // v.muted = true; v.autoplay = true; v.loop = true;
+        // v.muted = true; v.autoplay = true; v.loop = true; // optional silent autoplay
         v.style.objectFit = fit; v.style.maxWidth='100%'; v.style.maxHeight='80vh';
         viewEl.appendChild(v);
       } else {
@@ -400,16 +397,13 @@
     viewEl.addEventListener('touchend',   ()=>{ if(Math.abs(deltaX)>40) (deltaX<0?next():prev()); });
 
     async function loadGallery(){
-      // 1) Cache
       const cached = readCache();
       if(cached && cached.length){ ITEMS = cached; buildDots(); render(0); }
-      // 2) Refresh in background
       try{
         const fresh = await fetchGitHub();
         if(fresh.length){
           ITEMS = fresh; writeCache(fresh); buildDots(); render(0);
         } else if(!cached || !cached.length){
-          // 3) Fallback
           if(FALLBACK.length){ ITEMS = FALLBACK; buildDots(); render(0); }
           else { viewEl.innerHTML = '<div style="color:#6B5642;padding:16px">Add images/videos to the <code>/images</code> folder to populate the gallery.</div>'; }
         }

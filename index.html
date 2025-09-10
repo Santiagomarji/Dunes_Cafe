@@ -23,21 +23,6 @@
   <meta name="twitter:description" content="Cardamom coffee, spiced chai, savory manakish & sweets. Pop-ups, weddings & private events in NYC.">
   <meta name="twitter:image" content="https://santiagomarji.github.io/Dunes_Cafe/images/hero-chai.jpg">
 
-  <!-- Structured data: LocalBusiness / Cafe -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CafeOrCoffeeShop",
-    "name": "Dunes Café",
-    "image": "https://santiagomarji.github.io/Dunes_Cafe/images/hero-chai.jpg",
-    "email": "mailto:dunesnyc.cafe@gmail.com",
-    "telephone": "+19093315093",
-    "address": { "@type": "PostalAddress", "addressLocality": "Manhattan", "addressRegion": "NY", "addressCountry": "US" },
-    "url": "https://santiagomarji.github.io/Dunes_Cafe",
-    "sameAs": ["https://instagram.com/dunes_cafe"]
-  }
-  </script>
-
   <!-- Fonts: Inter (body) + Playfair Display (headings) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -45,7 +30,7 @@
   <style>
     :root{
       --bg:#FAF8F5; --card:#FFFFFF; --espresso:#3A2A1B; --foam:#FFF9F3;
-      --accent:#8E5A2B; --accent2:#C9A66B; --line:#E8E1D9; --muted:#6B5642; --pistachio:#B5C8A2;
+      --accent:#8E5A2B; --accent2:#C9A66B; --line:#E8E1D9; --muted:#6B5642;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html,body{background:var(--bg);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--espresso);-webkit-font-smoothing:antialiased}
@@ -60,8 +45,6 @@
     /* HERO */
     .hero{border:1px solid var(--line);border-radius:26px;background:linear-gradient(180deg,#fff,#FBF6EE);padding:40px 28px;display:grid;gap:20px}
     @media(min-width:900px){.hero{grid-template-columns:1.2fr .8fr;align-items:center}}
-
-    /* Premium hero title using Playfair */
     .h-title{
       font-family:'Playfair Display', serif;
       font-size:44px; line-height:1.08; margin:0; letter-spacing:.3px; color:var(--espresso);
@@ -74,7 +57,6 @@
 
     /* PANELS */
     .panel{border:1px solid var(--line);border-radius:22px;background:var(--card);padding:28px 24px;margin-top:28px;box-shadow:0 10px 28px rgba(160,120,80,.08)}
-    /* Section title now uses Playfair for strong hierarchy */
     .section-title{
       font-family:'Playfair Display', serif;
       font-size:26px; font-weight:700; letter-spacing:.5px; margin:0 0 12px; color:var(--espresso);
@@ -83,51 +65,44 @@
     .grid{display:grid;gap:18px}
     @media(min-width:860px){.grid.two{grid-template-columns:1fr 1fr}}
 
-    /* MENU styles */
-    .menu-hero{display:grid;gap:16px}
-    @media(min-width:860px){.menu-hero{grid-template-columns:1.2fr .8fr}}
+    /* MENU */
     .menu-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:16px}
-
-    /* Product typography hierarchy */
     .menu-item{margin-bottom:12px}
-    .menu-name{
-      font-weight:600; font-size:16px; color:var(--espresso); letter-spacing:.3px;
-    }
-    .menu-desc{
-      font-size:14px; color:var(--muted); margin-top:2px; margin-left:8px; line-height:1.45;
-    }
-
+    .menu-name{font-weight:600;font-size:16px;color:var(--espresso);letter-spacing:.3px}
+    .menu-desc{font-size:14px;color:var(--muted);margin-top:2px;margin-left:8px;line-height:1.45}
     .note{background:#FFF8EF;border:1px dashed #E9D7BD;padding:14px;border-radius:14px;color:#6B5642;font-size:14px;margin-top:12px}
     .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
     .pill{background:#FFF9F0;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px;color:#6B5642}
 
-    /* Signature drink tiles */
+    /* Signature tiles */
     .sig-grid{display:grid;gap:12px;margin-bottom:14px}
     @media(min-width:620px){.sig-grid{grid-template-columns:1fr 1fr}}
     .sig{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
     .sig img{display:block;width:100%;height:220px;object-fit:cover}
     .sig .body{padding:12px}
-    .sig .title{
-      font-family:'Playfair Display', serif;
-      font-size:18px; font-weight:700; color:var(--espresso); margin-bottom:4px; letter-spacing:.2px;
-    }
-    .sig .sub{font-size:13px; color:var(--muted); line-height:1.4}
+    .sig .title{font-family:'Playfair Display', serif;font-size:18px;font-weight:700;color:var(--espresso);margin-bottom:4px;letter-spacing:.2px}
+    .sig .sub{font-size:13px;color:var(--muted);line-height:1.4}
 
     /* EVENTS */
     .listline{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dashed var(--line);padding:10px 0;font-size:15px}
     .tag{border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:12px;background:#FFF9F0;color:#7D6B57}
+
+    /* WEDDINGS (synced to menu style) */
+    .w-subtitle{
+      font-family:'Playfair Display', serif;
+      font-size:20px;font-weight:700;letter-spacing:.3px;color:var(--espresso);margin:0 0 8px;
+    }
+    .w-list{margin:8px 0 0 18px;padding:0}
+    .w-list li{margin:6px 0;color:var(--espresso);line-height:1.5}
 
     /* FOOTER */
     .footer{margin-top:40px;text-align:center;color:#7D6B57;font-size:13px}
     .chipbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
     .chip{background:#FFF9F0;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px;color:#6B5642}
 
-    /* ===== Gallery (auto from GitHub, cached, no-crop; images + videos) ===== */
+    /* Gallery */
     .dg-wrap{border:1px solid var(--line);background:#FFFFFF;border-radius:20px;padding:16px;box-shadow:0 10px 28px rgba(160,120,80,.08);max-width:1000px;margin:28px auto}
-    .dg-title{
-      font-family:'Playfair Display', serif;
-      font-size:22px; font-weight:700; letter-spacing:.4px; color:var(--espresso); margin:0 0 10px 6px;
-    }
+    .dg-title{font-family:'Playfair Display', serif;font-size:22px;font-weight:700;letter-spacing:.4px;color:var(--espresso);margin:0 0 10px 6px}
     .dg-view{position:relative;background:#F5F0E8;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;place-items:center;min-height:320px}
     .dg-view img,.dg-view video{max-width:100%;max-height:80vh;width:auto;height:auto;object-fit:contain;display:block;background:#F5F0E8}
     .dg-nav{position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
@@ -136,7 +111,7 @@
     .dg-dots{display:flex;gap:8px;justify-content:center;margin-top:12px}
     .dg-dot{width:8px;height:8px;border-radius:999px;background:#E0D6C9}
     .dg-dot.is-active{background:#8E5A2B}
-    @media (hover:hover){.dg-btn:hover{background:#3A2A1B}}
+    @media(hover:hover){.dg-btn:hover{background:#3A2A1B}}
   </style>
 </head>
 <body>
@@ -170,7 +145,6 @@
           <div class="chip">📸 <a href="https://instagram.com/dunes_cafe" target="_blank" rel="noopener">@dunes_cafe</a></div>
         </div>
       </div>
-      <!-- Hero image from /images; hides if missing -->
       <img src="images/hero-chai.jpg" alt="Dunes Café — Arabic Chai Pour" onerror="this.style.display='none';" style="border-radius:18px;border:1px solid var(--line);width:100%;height:auto;">
     </section>
 
@@ -180,9 +154,9 @@
       <p class="muted">Arabic-inspired drinks, savory bites & sweets. All drinks customizable — alt milks & natural sweeteners.</p>
 
       <div class="grid two" style="align-items:start">
-        <!-- ========== DRINKS (ALL TOGETHER) ========== -->
+        <!-- DRINKS -->
         <div>
-          <!-- Signature tiles (auto-hide if image missing) -->
+          <!-- Signature tiles (auto-hide if missing images) -->
           <div class="sig-grid" style="margin-bottom:14px">
             <div class="sig">
               <img src="images/pistachio-rose.jpg" alt="Pistachio Rose Latte" onerror="this.parentElement.style.display='none';">
@@ -224,7 +198,7 @@
           </div>
         </div>
 
-        <!-- ========== FOOD (ALL TOGETHER) ========== -->
+        <!-- FOOD -->
         <div>
           <div class="menu-card">
             <h4 class="section-title" style="font-size:20px; margin-bottom:8px">Savory Bites — Fresh Saj & Wraps</h4>
@@ -254,13 +228,13 @@
       <p class="muted">Arabic coffee & chai bar for markets, offices, and celebrations.</p>
       <div class="grid two">
         <div>
-          <h4 class="section-title" style="font-size:18px">Houston</h4>
+          <h4 class="w-subtitle">Houston</h4>
           <div class="listline"><span>Montrose Farmers Market</span><span class="tag">Sundays</span></div>
           <div class="listline"><span>Esplanade at Navigation Farmers Market</span><span class="tag">Weekends</span></div>
           <div class="listline"><span>Houston Downtown Farmers Market</span><span class="tag">Seasonal</span></div>
         </div>
         <div>
-          <h4 class="section-title" style="font-size:18px">New York City</h4>
+          <h4 class="w-subtitle">New York City</h4>
           <div class="listline"><span>Dag Hammarskjöld Greenmarket (Midtown East)</span><span class="tag">Wednesdays</span></div>
           <div class="listline"><span>Union Square Weekend Feature</span><span class="tag">High Volume</span></div>
         </div>
@@ -271,13 +245,14 @@
       </div>
     </section>
 
-    <!-- WEDDINGS -->
+    <!-- WEDDINGS & PRIVATE EVENTS (synced fonts) -->
     <section id="weddings" class="panel">
       <h3 class="section-title">Weddings & Private Events</h3>
       <p class="muted">Arabic coffee & chai bar for receptions, dessert hours, and late-night resets.</p>
       <div class="grid two">
         <div>
-          <ul>
+          <div class="w-subtitle">What We Provide</div>
+          <ul class="w-list">
             <li>Custom menu: saffron chai, rose-cardamom, pistachio</li>
             <li>Branded cups & signage to match your theme</li>
             <li>Dessert pairing: ma’amoul & pistachio cakes</li>
@@ -285,6 +260,7 @@
           </ul>
         </div>
         <div class="note">
+          <strong>Logistics</strong><br/>
           • Load-in: 45–60 min • Power: 15A preferred (battery options)<br/>
           • Venue coordination & COI as needed • NYC & nearby
         </div>
@@ -321,22 +297,14 @@
     const IMG_EXTS = ['.jpg','.jpeg','.png','.gif','.webp'];
     const VID_EXTS = ['.mp4','.webm','.ogg'];
     const CACHE_KEY = 'dunes_gallery_v1';
-    const CACHE_TTL_MS = 1000 * 60 * 30; // 30 minutes
+    const CACHE_TTL_MS = 1000 * 60 * 30; // 30 min
 
     const viewEl = document.getElementById('dg-view');
     const dotsEl = document.getElementById('dg-dots');
     const prevBtn = document.getElementById('dg-prev');
     const nextBtn = document.getElementById('dg-next');
 
-    let ITEMS = [];
-    let i = 0, startX = 0, deltaX = 0;
-
-    // Optional static fallback entries if API+cache fail (uncomment & point to your files)
-    const FALLBACK = [
-      // { type:'img', src:'images/20240616_101301.jpg', alt:'market chai' },
-      // { type:'img', src:'images/20240313_211027.jpg', alt:'arabic sweets' },
-      // { type:'video', src:'images/dunes_pour.mp4' }
-    ];
+    let ITEMS = []; let i = 0; let startX = 0; let deltaX = 0;
 
     function readCache(){
       try{
@@ -358,17 +326,16 @@
       return list
         .filter(x => x.type === 'file' && x.download_url)
         .map(x => {
-          const name  = x.name;
-          const lower = name.toLowerCase();
-          const ext   = lower.slice(lower.lastIndexOf('.'));
+          const name = x.name.toLowerCase();
+          const ext  = name.slice(name.lastIndexOf('.'));
           const isVideo = VID_EXTS.includes(ext);
           const isImage = IMG_EXTS.includes(ext);
-          if (!isVideo && !isImage) return null;
+          if(!isVideo && !isImage) return null;
           const isCover = /__cover\./i.test(name);
-          return { type: isVideo ? 'video' : 'img', src: x.download_url, alt: lower.replace(/\..+$/,'').replace(/[-_]/g,' '), cover:isCover };
+          return { type: isVideo ? 'video' : 'img', src: x.download_url, alt: name.replace(/\..+$/,''), cover:isCover };
         })
         .filter(Boolean)
-        .sort((a,b)=> a.src.localeCompare(b.src)); // order by filename (001_, 002_, etc.)
+        .sort((a,b)=> a.src.localeCompare(b.src));
     }
 
     function buildDots(){
@@ -376,7 +343,6 @@
       ITEMS.forEach((_, idx) => {
         const d = document.createElement('button');
         d.className = 'dg-dot' + (idx===0 ? ' is-active':'');
-        d.setAttribute('aria-label', 'Go to slide ' + (idx+1));
         d.addEventListener('click', () => go(idx));
         dotsEl.appendChild(d);
       });
@@ -386,25 +352,18 @@
       const item = ITEMS[index];
       viewEl.innerHTML = '';
       const fit = item.cover ? 'cover' : 'contain';
-
       if(item.type === 'video'){
         const v = document.createElement('video');
-        v.src = item.src;
-        v.controls = true;
-        v.playsInline = true;
-        v.preload = 'metadata';
-        // v.muted = true; v.autoplay = true; v.loop = true; // optional silent autoplay
+        v.src = item.src; v.controls = true; v.playsInline = true; v.preload = 'metadata';
         v.style.objectFit = fit; v.style.maxWidth='100%'; v.style.maxHeight='80vh';
         viewEl.appendChild(v);
-      } else {
+      }else{
         const img = document.createElement('img');
-        img.src = item.src;
-        img.alt = item.alt || 'Dunes Café';
-        img.loading = index === 0 ? 'eager' : 'lazy';
+        img.src = item.src; img.alt = 'Dunes Café'; img.loading = index===0?'eager':'lazy';
         img.style.objectFit = fit; img.style.maxWidth='100%'; img.style.maxHeight='80vh';
         viewEl.appendChild(img);
       }
-      [...dotsEl.children].forEach((dot, k)=>dot.classList.toggle('is-active', k===index));
+      [...dotsEl.children].forEach((dot,k)=>dot.classList.toggle('is-active',k===index));
     }
 
     function go(index){ i = (index + ITEMS.length) % ITEMS.length; render(i); }
@@ -416,24 +375,21 @@
     window.addEventListener('keydown', (e)=>{ if(e.key==='ArrowRight') next(); if(e.key==='ArrowLeft') prev(); });
 
     viewEl.addEventListener('touchstart', (e)=>{ startX = e.touches[0].clientX; deltaX = 0; }, {passive:true});
-    viewEl.addEventListener('touchmove',  (e)=>{ deltaX = e.touches[0].clientX - startX; }, {passive:true});
-    viewEl.addEventListener('touchend',   ()=>{ if(Math.abs(deltaX)>40) (deltaX<0?next():prev()); });
+    viewEl.addEventListener('touchmove', (e)=>{ deltaX = e.touches[0].clientX - startX; }, {passive:true});
+    viewEl.addEventListener('touchend', ()=>{ if(Math.abs(deltaX)>40) (deltaX<0?next():prev()); });
 
     async function loadGallery(){
       const cached = readCache();
       if(cached && cached.length){ ITEMS = cached; buildDots(); render(0); }
       try{
         const fresh = await fetchGitHub();
-        if(fresh.length){
-          ITEMS = fresh; writeCache(fresh); buildDots(); render(0);
-        } else if(!cached || !cached.length){
-          if(FALLBACK.length){ ITEMS = FALLBACK; buildDots(); render(0); }
-          else { viewEl.innerHTML = '<div style="color:#6B5642;padding:16px">Add images/videos to the <code>/images</code> folder to populate the gallery.</div>'; }
+        if(fresh.length){ ITEMS = fresh; writeCache(fresh); buildDots(); render(0); }
+        else if(!cached || !cached.length){
+          viewEl.innerHTML = '<div style="color:#6B5642;padding:16px">Add images/videos to the <code>/images</code> folder to populate the gallery.</div>';
         }
       }catch{
         if(!cached || !cached.length){
-          if(FALLBACK.length){ ITEMS = FALLBACK; buildDots(); render(0); }
-          else { viewEl.innerHTML = '<div style="color:#6B5642;padding:16px">Could not load gallery. Try again later.</div>'; }
+          viewEl.innerHTML = '<div style="color:#6B5642;padding:16px">Could not load gallery. Try again later.</div>';
         }
       }
     }

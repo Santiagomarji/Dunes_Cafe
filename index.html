@@ -8,7 +8,7 @@
 
   <!-- Canonical + favicon -->
   <link rel="canonical" href="https://santiagomarji.github.io/Dunes_Cafe/">
-  <link rel="icon" href="images/favicon.jfavicon.jpg" type="image/png">
+  <link rel="icon" href="images/favicon.png" type="image/png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -38,8 +38,9 @@
   }
   </script>
 
+  <!-- Fonts: Inter (body) + Playfair Display (headings) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -53,13 +54,18 @@
 
     /* NAV */
     .nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
-    .brand{font-weight:800;font-size:20px;letter-spacing:.3px}
+    .brand{font-weight:800;font-size:20px;letter-spacing:.35px}
     .nav a{font-weight:600;margin-left:18px;opacity:.9}
 
     /* HERO */
     .hero{border:1px solid var(--line);border-radius:26px;background:linear-gradient(180deg,#fff,#FBF6EE);padding:40px 28px;display:grid;gap:20px}
     @media(min-width:900px){.hero{grid-template-columns:1.2fr .8fr;align-items:center}}
-    .h-title{font-size:42px;line-height:1.05;margin:0}
+
+    /* Premium hero title using Playfair */
+    .h-title{
+      font-family:'Playfair Display', serif;
+      font-size:44px; line-height:1.08; margin:0; letter-spacing:.3px; color:var(--espresso);
+    }
     .h-sub{color:var(--muted);margin:12px 0 0 0;font-size:16px}
     .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
     .btn{border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-weight:600;transition:.2s ease}
@@ -68,7 +74,11 @@
 
     /* PANELS */
     .panel{border:1px solid var(--line);border-radius:22px;background:var(--card);padding:28px 24px;margin-top:28px;box-shadow:0 10px 28px rgba(160,120,80,.08)}
-    .section-title{font-weight:800;font-size:22px;margin:0 0 10px}
+    /* Section title now uses Playfair for strong hierarchy */
+    .section-title{
+      font-family:'Playfair Display', serif;
+      font-size:26px; font-weight:700; letter-spacing:.5px; margin:0 0 12px; color:var(--espresso);
+    }
     .muted{color:var(--muted)}
     .grid{display:grid;gap:18px}
     @media(min-width:860px){.grid.two{grid-template-columns:1fr 1fr}}
@@ -77,9 +87,16 @@
     .menu-hero{display:grid;gap:16px}
     @media(min-width:860px){.menu-hero{grid-template-columns:1.2fr .8fr}}
     .menu-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:16px}
-    .menu-item{margin-bottom:10px}
-    .menu-name{font-weight:700}
-    .menu-desc{color:var(--muted);font-size:14px;margin-left:12px}
+
+    /* Product typography hierarchy */
+    .menu-item{margin-bottom:12px}
+    .menu-name{
+      font-weight:600; font-size:16px; color:var(--espresso); letter-spacing:.3px;
+    }
+    .menu-desc{
+      font-size:14px; color:var(--muted); margin-top:2px; margin-left:8px; line-height:1.45;
+    }
+
     .note{background:#FFF8EF;border:1px dashed #E9D7BD;padding:14px;border-radius:14px;color:#6B5642;font-size:14px;margin-top:12px}
     .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
     .pill{background:#FFF9F0;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px;color:#6B5642}
@@ -90,8 +107,11 @@
     .sig{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
     .sig img{display:block;width:100%;height:220px;object-fit:cover}
     .sig .body{padding:12px}
-    .sig .title{font-weight:700;margin-bottom:4px}
-    .sig .sub{color:#7b6a58;font-size:14px}
+    .sig .title{
+      font-family:'Playfair Display', serif;
+      font-size:18px; font-weight:700; color:var(--espresso); margin-bottom:4px; letter-spacing:.2px;
+    }
+    .sig .sub{font-size:13px; color:var(--muted); line-height:1.4}
 
     /* EVENTS */
     .listline{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dashed var(--line);padding:10px 0;font-size:15px}
@@ -104,7 +124,10 @@
 
     /* ===== Gallery (auto from GitHub, cached, no-crop; images + videos) ===== */
     .dg-wrap{border:1px solid var(--line);background:#FFFFFF;border-radius:20px;padding:16px;box-shadow:0 10px 28px rgba(160,120,80,.08);max-width:1000px;margin:28px auto}
-    .dg-title{font:800 22px/1.2 Inter,system-ui,sans-serif;margin:0 0 10px 6px}
+    .dg-title{
+      font-family:'Playfair Display', serif;
+      font-size:22px; font-weight:700; letter-spacing:.4px; color:var(--espresso); margin:0 0 10px 6px;
+    }
     .dg-view{position:relative;background:#F5F0E8;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;place-items:center;min-height:320px}
     .dg-view img,.dg-view video{max-width:100%;max-height:80vh;width:auto;height:auto;object-fit:contain;display:block;background:#F5F0E8}
     .dg-nav{position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
@@ -178,14 +201,14 @@
           </div>
 
           <div class="menu-card">
-            <h4 style="margin-bottom:8px">Signature Drinks</h4>
+            <h4 class="section-title" style="font-size:20px; margin-bottom:8px">Signature Drinks</h4>
             <div class="menu-item"><div class="menu-name">Pistachio Rose Latte</div><div class="menu-desc">Cardamom coffee, pistachio cream, rose drizzle, pistachio</div></div>
             <div class="menu-item"><div class="menu-name">Saffron Rose Chai</div><div class="menu-desc">Spiced chai with saffron threads & rose petals</div></div>
             <div class="menu-item"><div class="menu-name">Cardamom Cloud Brew</div><div class="menu-desc">Cold brew topped with cardamom cold foam & date syrup</div></div>
             <div class="menu-item"><div class="menu-name">Iced Pistachio Chai (Seasonal)</div><div class="menu-desc">Cold-brew chai, pistachio cream, crushed nuts</div></div>
             <div class="menu-item"><div class="menu-name">Pink Hibiscus Lemonade</div><div class="menu-desc">Hibiscus, rose, lemon, mint (caffeine-free)</div></div>
 
-            <h4 style="margin:16px 0 8px">Aromatic Classics</h4>
+            <h4 class="section-title" style="font-size:20px; margin:16px 0 8px">Aromatic Classics</h4>
             <div class="menu-item"><div class="menu-name">Arabic Cardamom Coffee</div><div class="menu-desc">Traditional Arabic brew infused with cardamom (Hot)</div></div>
             <div class="menu-item"><div class="menu-name">Arabic Chai Latte</div><div class="menu-desc">Spiced black tea with cardamom, cinnamon, cloves (Hot/Iced)</div></div>
             <div class="menu-item"><div class="menu-name">Sweet Milk Gahwa</div><div class="menu-desc">Smooth, lightly sweet Arabic coffee</div></div>
@@ -204,7 +227,7 @@
         <!-- ========== FOOD (ALL TOGETHER) ========== -->
         <div>
           <div class="menu-card">
-            <h4 style="margin-bottom:8px">Savory Bites — Fresh Saj & Wraps</h4>
+            <h4 class="section-title" style="font-size:20px; margin-bottom:8px">Savory Bites — Fresh Saj & Wraps</h4>
             <div class="menu-item"><div class="menu-name">Manakish Za’atar</div><div class="menu-desc">Flatbread with za’atar & olive oil</div></div>
             <div class="menu-item"><div class="menu-name">Cheese Manakish</div><div class="menu-desc">Melted halloumi/mozzarella blend</div></div>
             <div class="menu-item"><div class="menu-name">Half & Half Manakish</div><div class="menu-desc">Za’atar + cheese</div></div>
@@ -214,7 +237,7 @@
           </div>
 
           <div class="menu-card" style="margin-top:16px">
-            <h4 style="margin-bottom:8px">Sweets & Treats</h4>
+            <h4 class="section-title" style="font-size:20px; margin-bottom:8px">Sweets & Treats</h4>
             <div class="menu-item"><div class="menu-name">Kunafa Cups</div><div class="menu-desc">Layered pastry, pistachio, rose drizzle</div></div>
             <div class="menu-item"><div class="menu-name">Date Cookies (Ma’amoul)</div><div class="menu-desc">Shortbread filled with dates</div></div>
             <div class="menu-item"><div class="menu-name">Pistachio Bites</div><div class="menu-desc">Roasted pistachios with rose syrup & cardamom</div></div>
@@ -231,13 +254,13 @@
       <p class="muted">Arabic coffee & chai bar for markets, offices, and celebrations.</p>
       <div class="grid two">
         <div>
-          <h4>Houston</h4>
+          <h4 class="section-title" style="font-size:18px">Houston</h4>
           <div class="listline"><span>Montrose Farmers Market</span><span class="tag">Sundays</span></div>
           <div class="listline"><span>Esplanade at Navigation Farmers Market</span><span class="tag">Weekends</span></div>
           <div class="listline"><span>Houston Downtown Farmers Market</span><span class="tag">Seasonal</span></div>
         </div>
         <div>
-          <h4>New York City</h4>
+          <h4 class="section-title" style="font-size:18px">New York City</h4>
           <div class="listline"><span>Dag Hammarskjöld Greenmarket (Midtown East)</span><span class="tag">Wednesdays</span></div>
           <div class="listline"><span>Union Square Weekend Feature</span><span class="tag">High Volume</span></div>
         </div>
